@@ -1,0 +1,283 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+@font-face {
+  font-family: 'Pluto-Primary';
+  src:
+    url('https://cdn.assets.pluto-service.com/css/fonts/PolySans/PolySans-Neutral.woff')
+      format('woff'),
+    url('https://cdn.assets.pluto-service.com/css/fonts/PolySans/PolySans-Neutral.ttf')
+      format('truetype');
+}
+
+@font-face {
+  font-family: 'Pluto-Primary';
+  src:
+    url('https://cdn.assets.pluto-service.com/css/fonts/PolySans/PolySans-Bulky.woff')
+      format('woff'),
+    url('https://cdn.assets.pluto-service.com/css/fonts/PolySans/PolySans-Bulky.ttf')
+      format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Pluto-Primary';
+  src:
+    url('https://cdn.assets.pluto-service.com/css/fonts/PolySans/PolySans-Median.woff')
+      format('woff'),
+    url('https://cdn.assets.pluto-service.com/css/fonts/PolySans/PolySans-Median.ttf')
+      format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Pluto-Primary';
+  src:
+    url('https://cdn.assets.pluto-service.com/css/fonts/PolySans/PolySans-Slim.woff')
+      format('woff'),
+    url('https://cdn.assets.pluto-service.com/css/fonts/PolySans/PolySans-Slim.ttf')
+      format('truetype');
+  font-weight: lighter;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html {
+  height: 100%;
+}
+
+body {
+  --bs-body-font-family: 'Pluto-Primary';
+  height: 100%;
+}
+
+.logo {
+  height: 5rem;
+  width: 10rem;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.pluto-footer {
+  /* position: fixed; */
+  bottom: 0;
+  width: 100%;
+  color: #7987a1;
+  display: block;
+  border-top: 1px solid #e6e9e6;
+  background: #fff;
+}
+
+.pluto-footer-inner {
+  height: 2.75rem;
+}
+
+.pluto-footer .row {
+  font-size: 0.8rem !important;
+}
+
+#paging {
+  padding: 0 20px 20px 20px;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+#paging a {
+  color: #000;
+  background: #e0e0e0;
+  padding: 8px 12px;
+  margin-right: 5px;
+  text-decoration: none;
+}
+
+#paging a.aktif {
+  background: #000 !important;
+  color: #fff;
+}
+
+#paging a:hover {
+  border: 1px solid #000;
+}
+
+.hidden {
+  display: none;
+}
+
+.signature-pad {
+  left: 0;
+  top: 0;
+  border-radius: 0.4rem;
+  border: 1px solid #e6e9e6;
+}
+
+#signature-pad ul {
+  list-style-type: circle !important;
+}
+
+/***************** Toast css *****************/
+
+.custom_toast_css {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  color: #363636;
+  line-height: 1.3;
+  will-change: transform;
+  box-shadow:
+    0 3px 10px rgba(0, 0, 0, 0.1),
+    0 3px 3px rgba(0, 0, 0, 0.05);
+  max-width: 350px;
+  pointer-events: auto;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border-bottom: 4px solid red;
+  padding: 16px;
+  color: rgb(60, 95, 75);
+  margin-right: 25px;
+  animation: none;
+  cursor: pointer;
+}
+
+.custom_toast_css_success {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  color: #363636;
+  line-height: 1.3;
+  will-change: transform;
+  box-shadow:
+    0 3px 10px rgba(0, 0, 0, 0.1),
+    0 3px 3px rgba(0, 0, 0, 0.05);
+  max-width: 350px;
+  pointer-events: auto;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border-bottom: 4px solid green;
+  padding: 16px;
+  color: rgb(60, 95, 75);
+  margin-right: 25px;
+  animation: none;
+  cursor: pointer;
+}
+
+.custom_toast_css:hover,
+.custom_toast_css_success:hover {
+  background-color: #f2f2f2;
+}
+
+.custom_toast_css button,
+.custom_toast_css_success button {
+  margin-left: auto;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.show_toast {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.close_toast_animation {
+  animation: fadeOut 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+/***************** Toast css end *****************/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

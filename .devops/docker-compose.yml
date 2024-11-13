@@ -1,0 +1,26 @@
+---
+version: '3.3'
+
+services:
+
+  pluto-patient-dashboard:
+    container_name: pluto-patient-dashboard
+    hostname: pluto-patient-dashboard
+    image: "${APP_IMAGE}"
+    env_file:
+      - .env
+    ports:
+      - 3005:80
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 10s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
+        max-file: "10"
+        compress: "true"
+    restart: unless-stopped
